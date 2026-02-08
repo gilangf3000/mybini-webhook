@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notif Realtime</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Notifikasi Realtime</h1>
+    <ul id="notif-list"></ul>
+
+    <script>
+        const socket = io()
+        const list = document.getElementById("notif-list")
+
+        socket.on("all_notif", logs => {
+            logs.forEach(log => {
+                const li = document.createElement("li")
+                li.textContent = JSON.stringify(log)
+                list.appendChild(li)
+            })
+        })
+
+        socket.on("new_notif", notif => {
+            const li = document.createElement("li")
+            li.textContent = JSON.stringify(notif)
+            list.appendChild(li)
+        })
+    </script>
+</body>
+</html>

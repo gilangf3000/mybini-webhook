@@ -1,0 +1,26 @@
+{
+  "name": "mybini-webhook",
+  "version": "1.0.0",
+  "description": "payment gateway",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilangf3000/mybini-webhook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/gilangf3000/mybini-webhook/issues"
+  },
+  "homepage": "https://github.com/gilangf3000/mybini-webhook#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "fs": "^0.0.1-security",
+    "socket.io": "^4.8.3"
+  }
+}
